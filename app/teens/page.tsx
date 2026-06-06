@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "For Students - Earn Money Online | Student Freelancing Jobs",
   description:
     "Join 70 lakh young Indians already earning on Funngro. Promote brands, create content, refer friends — paid instantly via UPI. Free to join, no experience needed.",
+  alternates: {
+    canonical: "/teens",
+  },
   keywords: [
     "earn money online for students",
     "student freelancing",

@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Hire Student Freelancers - Affordable Young Talent | Funngro",
   description:
     "Reach 70 lakh young Indian consumers through Funngro. Run brand promotions, content campaigns, referral drives and product sampling at scale — authentically, affordably.",
+  alternates: {
+    canonical: "/companies",
+  },
   keywords: [
     "hire student freelancers",
     "hire young talent",

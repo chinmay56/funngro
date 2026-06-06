@@ -7,8 +7,10 @@ import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://funngro.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://funngro.com"),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "Funngro - Earn While You Learn | Student Freelancing Platform",
     template: "%s | Funngro",
@@ -27,6 +29,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Funngro" }],
   creator: "Funngro",
   publisher: "Funngro",
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
@@ -41,17 +46,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://funngro.com",
+    url: BASE_URL,
     title: "Funngro - Earn While You Learn",
     description:
       "70 lakh young Indians earn money on Funngro by working with India's biggest brands. Free to join, paid via UPI.",
     siteName: "Funngro",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Funngro Platform",
+        alt: "Funngro - Earn While You Learn",
       },
     ],
   },
@@ -60,11 +65,8 @@ export const metadata: Metadata = {
     title: "Funngro - Earn While You Learn",
     description:
       "70 lakh young Indians earn money on Funngro by working with India's biggest brands. Free to join, paid via UPI.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
     creator: "@funngro",
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
 };
 
@@ -75,6 +77,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <Header />
