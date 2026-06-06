@@ -25,18 +25,18 @@ export default function TeenHero() {
               transition={{ delay: 0.2 }}
               className="inline-block px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-sm font-medium mb-6"
             >
-              💰 Free to join — earn in UPI, no experience needed
+              💰 Free to join &mdash; earn in UPI, no experience needed
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               <span className="dark:text-white">Work with</span>
               <br />
-              <span className="text-gradient">India's Biggest Brands</span>
+              <span className="text-gradient">India&apos;s Biggest Brands</span>
             </h1>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               70 lakh young Indians earn on Funngro by promoting brands, creating
-              content, referring friends and trying new products — all paid directly
+              content, referring friends and trying new products &mdash; all paid directly
               to your UPI. No degree. No experience. Free, forever.
             </p>
 
