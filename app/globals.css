@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg:           255 255 255;
+    --fg:           15 15 19;
+    --card:         255 255 255;
+    --border:       230 225 220;
+    --muted:        120 113 108;
+  }
+
+  .dark {
+    --bg:           15 15 19;
+    --fg:           245 243 240;
+    --card:         24 24 31;
+    --border:       45 45 58;
+    --muted:        160 155 150;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-[#0f0f13] text-gray-900 dark:text-gray-100;
+  }
+
+  ::selection {
+    @apply bg-primary-400/30 text-primary-900;
+  }
+}
+
+@layer utilities {
+  /* Glass morphism — light and dark tuned separately */
+  .glass {
+    @apply bg-white/80 dark:bg-surface-800/80
+           backdrop-blur-xl
+           border border-gray-200/60 dark:border-surface-600/60
+           shadow-card dark:shadow-card-dark;
+  }
+
+  .glass-strong {
+    @apply bg-white/95 dark:bg-surface-800/95
+           backdrop-blur-2xl
+           border border-gray-200 dark:border-surface-600
+           shadow-lg;
+  }
+
+  /* Section backgrounds */
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary-50/60 via-white to-accent-50/40
+           dark:from-surface-900 dark:via-surface-800 dark:to-surface-900;
+  }
+
+  .section-white {
+    @apply bg-white dark:bg-surface-900;
+  }
+
+  .section-subtle {
+    @apply bg-gray-50/80 dark:bg-surface-800;
+  }
+
+  /* Brand gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent
+           bg-gradient-to-r from-primary-500 to-accent-500;
+  }
+
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent
+           bg-gradient-to-r from-primary-600 via-primary-400 to-accent-400;
+  }
+
+  /* CTA buttons */
+  .btn-primary {
+    @apply px-8 py-3.5 rounded-full font-semibold text-white
+           bg-gradient-to-r from-primary-500 to-primary-600
+           hover:from-primary-400 hover:to-primary-500
+           shadow-glow-sm hover:shadow-glow-md
+           transition-all duration-200 hover:scale-[1.03]
+           active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3.5 rounded-full font-semibold
+           bg-white dark:bg-surface-700
+           text-gray-800 dark:text-gray-100
+           border border-gray-200 dark:border-surface-600
+           hover:border-primary-300 dark:hover:border-primary-600
+           hover:shadow-md transition-all duration-200
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  /* Glow blob for hero backgrounds */
+  .blob {
+    @apply rounded-full mix-blend-multiply dark:mix-blend-screen
+           filter blur-3xl opacity-40 animate-float;
+  }
+
+  /* Subtle card hover lift */
+  .card-hover {
+    @apply transition-all duration-300
+           hover:-translate-y-1 hover:shadow-glow-sm;
+  }
+}
